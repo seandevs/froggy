@@ -1,0 +1,43 @@
+(in /Users/seandevs/Desktop/build/froggy)
+                 frogs GET    /frogs                           {:controller=>"frogs", :action=>"index"}
+       formatted_frogs GET    /frogs.:format                   {:controller=>"frogs", :action=>"index"}
+                       POST   /frogs                           {:controller=>"frogs", :action=>"create"}
+                       POST   /frogs.:format                   {:controller=>"frogs", :action=>"create"}
+              new_frog GET    /frogs/new                       {:controller=>"frogs", :action=>"new"}
+    formatted_new_frog GET    /frogs/new.:format               {:controller=>"frogs", :action=>"new"}
+             edit_frog GET    /frogs/:id/edit                  {:controller=>"frogs", :action=>"edit"}
+   formatted_edit_frog GET    /frogs/:id/edit.:format          {:controller=>"frogs", :action=>"edit"}
+                  frog GET    /frogs/:id                       {:controller=>"frogs", :action=>"show"}
+        formatted_frog GET    /frogs/:id.:format               {:controller=>"frogs", :action=>"show"}
+                       PUT    /frogs/:id                       {:controller=>"frogs", :action=>"update"}
+                       PUT    /frogs/:id.:format               {:controller=>"frogs", :action=>"update"}
+                       DELETE /frogs/:id                       {:controller=>"frogs", :action=>"destroy"}
+                       DELETE /frogs/:id.:format               {:controller=>"frogs", :action=>"destroy"}
+                 users GET    /users                           {:controller=>"users", :action=>"index"}
+       formatted_users GET    /users.:format                   {:controller=>"users", :action=>"index"}
+                       POST   /users                           {:controller=>"users", :action=>"create"}
+                       POST   /users.:format                   {:controller=>"users", :action=>"create"}
+              new_user GET    /users/new                       {:controller=>"users", :action=>"new"}
+    formatted_new_user GET    /users/new.:format               {:controller=>"users", :action=>"new"}
+             edit_user GET    /users/:id/edit                  {:controller=>"users", :action=>"edit"}
+   formatted_edit_user GET    /users/:id/edit.:format          {:controller=>"users", :action=>"edit"}
+                  user GET    /users/:id                       {:controller=>"users", :action=>"show"}
+        formatted_user GET    /users/:id.:format               {:controller=>"users", :action=>"show"}
+                       PUT    /users/:id                       {:controller=>"users", :action=>"update"}
+                       PUT    /users/:id.:format               {:controller=>"users", :action=>"update"}
+                       DELETE /users/:id                       {:controller=>"users", :action=>"destroy"}
+                       DELETE /users/:id.:format               {:controller=>"users", :action=>"destroy"}
+               session POST   /session                         {:controller=>"sessions", :action=>"create"}
+     formatted_session POST   /session.:format                 {:controller=>"sessions", :action=>"create"}
+           new_session GET    /session/new                     {:controller=>"sessions", :action=>"new"}
+ formatted_new_session GET    /session/new.:format             {:controller=>"sessions", :action=>"new"}
+          edit_session GET    /session/edit                    {:controller=>"sessions", :action=>"edit"}
+formatted_edit_session GET    /session/edit.:format            {:controller=>"sessions", :action=>"edit"}
+                       GET    /session                         {:controller=>"sessions", :action=>"show"}
+                       GET    /session.:format                 {:controller=>"sessions", :action=>"show"}
+                       PUT    /session                         {:controller=>"sessions", :action=>"update"}
+                       PUT    /session.:format                 {:controller=>"sessions", :action=>"update"}
+                       DELETE /session                         {:controller=>"sessions", :action=>"destroy"}
+                       DELETE /session.:format                 {:controller=>"sessions", :action=>"destroy"}
+                              /:controller/:action/:id         
+                              /:controller/:action/:id.:format 

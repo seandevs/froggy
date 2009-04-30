@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+<li id=<%= "frog_#{u_frog.id}" %>
+<h3>
+  <tr>
+    <td><%= image_tag u_frog.user.photo.url(:small) %></td>	
+    <td><%= link_to u_frog.user.name, u_frog.user %></td>
+    <td><%= u_frog.name %></td>
+    <td><%= link_to_remote "Destroy", :url => {:controller => "frogs", :action => "destroy", :id => u_frog.id}, :method => 'delete', 			:update => "frog_#{u_frog.id}" %></td>
+  </tr>
+</h3>
+</li>

@@ -1,0 +1,13 @@
+<p><% form_remote_tag :url => {:action => 'create' } do %>
+<%= text_area 'frog','name', :size =>"50x3" %><br /><br />
+  <%= submit_tag 'New Frog' %></p>
+<% end %>
+
+<span id="new_frog">
+
+
+<%= render :partial => @frogs %>
+
+</span>
+
+

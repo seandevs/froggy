@@ -1,0 +1,4 @@
+page.insert_html :top, 'new_frog', :partial => 'frog'
+page["frog_#{@frog.id}"].visual_effect :highlight,
+          :duration => 2.5
+page[:frog_name].clear
