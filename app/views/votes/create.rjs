@@ -1,0 +1,2 @@
+page.replace_html "vote_frog_#{@frog.id}", "Leaps: #{@frog.votes.size}" 
+page["vote_frog_#{@frog.id}"].visual_effect :highlight
