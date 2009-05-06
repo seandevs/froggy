@@ -15,4 +15,15 @@
 	<% form_remote_tag :url => frog_votes_path(frog) do %>
 	  <%= submit_tag 'leap it' %>
 	<% end %>
+
+    <% form_remote_tag :url => {:controller => "votes", :action => "destroy", :id => frog.id}, :method => 'delete' do %>
+	  <%= submit_tag 'kill it' %>
+	<% end %>
 </div>
+
+
+
+
+
+
+
