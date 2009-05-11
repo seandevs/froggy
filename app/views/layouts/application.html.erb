@@ -10,9 +10,10 @@
 </head>
 <body>
   <div id="content"> 
-    <div id="login_logout">
+    <div id="main_nav">
+	  <%= link_to "Home", frogs_path %> |
 	  <% if @current_user %>
-	    <%= link_to @current_user.login, edit_user_path(@current_user) %>
+	    <%= link_to @current_user.login, edit_user_path(@current_user) %> |
 	    <em><%= link_to "(logout)", session_path, :method => :delete %></em>
 	  <% else %>
 	     <em>Not logged in.</em>

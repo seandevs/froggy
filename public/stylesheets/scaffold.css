@@ -52,4 +52,34 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+#content {
+  background-color: #f4e0b5;
+  border: 5px solid #ccc;
+  padding: 10px 10px 20px 10px;
+}
+
+#main_nav { 
+ float: right; 
+ color: #999; 
+ font-size: 12px; 
+} 
+#main_nav a {
+  color: #9454ba;
+}
+#main_nav :hover
+{
+	background: #c0dbe6;
+	color: #339;
+}
+
+h4 { 
+  margin: 10px 0; 
+  padding: 7px 7px 3px; 
+  border: 1px solid #393; 
+  background-color: #fff; 
+  color: #393;
+}
+
+
+
 

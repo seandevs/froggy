@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :login_required
+  before_filter :login_required, :except => [:new, :create]
   before_filter :check_user, :only => [:edit, :update]
   
   def show
@@ -23,8 +23,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:notice] = 'Your new user has been added - Holla'
-      redirect_to user_path(@user)
+      flash[:notice] = 'You Have Successfully Registered - Please Login Now'
+      redirect_to new_session_path
     else
       render :action => 'new'
     end

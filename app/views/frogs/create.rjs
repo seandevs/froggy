@@ -1,6 +1,6 @@
 page.insert_html :top, 'new_frog', :partial => 'frog'
 page["frog_#{@frog.id}"].visual_effect :highlight, 
-                                       :duration => 1.5, 
+                                       :duration => 1, 
                                        :startcolor => '#aff9af', 
-                                       :endcolor => '#f4f9f4'
+                                       :endcolor => '#ffffff'
 page[:frog_name].clear

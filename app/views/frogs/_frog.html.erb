@@ -1,25 +1,17 @@
-
-<li id=<%= "frog_#{frog.id}" %>
-<h3>
+<h4>
+<div id="frog_<%= frog.id %>">
   <tr>
     <td><%= image_tag frog.user.photo.url(:small) %></td>	
-    <td><%= link_to frog.user.name, frog.user %></td>
+    <td><%= link_to frog.user.name, frog.user %>:</td>
     <td><%= frog.name %></td>
-    <span id=<%= "vote_frog_#{frog.id}" %>
-	<td>Leaps: <%= frog.votes.size %></td></span>
   </tr>
-</h3>
-</li>
+    <td><%= link_to_remote(image_tag("aup.jpg", :border => "none"), :url => frog_votes_path(frog)) %></td>
+    <span id=<%= "vote_frog_#{frog.id}" %>
+    <td>Leaps: <%= frog.votes.size %></td></span>
+    <td><%= link_to_remote(image_tag("adown.jpg", :border => "none"), :url => {:controller => "votes", :action => "destroy", :id => frog.id}, :method => 'delete') %></td>
+</div></h4>
 
-<div id="vote_form">
-	<% form_remote_tag :url => frog_votes_path(frog) do %>
-	  <%= submit_tag 'leap it' %>
-	<% end %>
 
-    <% form_remote_tag :url => {:controller => "votes", :action => "destroy", :id => frog.id}, :method => 'delete' do %>
-	  <%= submit_tag 'kill it' %>
-	<% end %>
-</div>
 
 
 
