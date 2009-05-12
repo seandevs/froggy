@@ -1,5 +1,6 @@
 class FrogsController < ApplicationController
   before_filter :login_required
+  before_filter :check_frog, :only => [:destroy, :edit, :update]
   def index
     @frogs = Frog.find(:all, :order => 'frogs.id DESC')
     @users = User.find(:all)
@@ -49,8 +50,8 @@ class FrogsController < ApplicationController
   end
 
   def destroy
-    #@frog = Frog.find(params[:id])
-    @frog = @current_user.frogs.find(params[:id])
+    @frog = Frog.find(params[:id])
+    #@frog = @current_user.frogs.find(params[:id])
     @frog.destroy
 
     respond_to do |format|
@@ -58,4 +59,12 @@ class FrogsController < ApplicationController
       format.js { render :nothing => true }
     end
   end
+  
+  protected
+  def check_frog
+    if Frog.find(params[:id]).user.id != @current_user.id
+      flash[:notice] = 'ah ah ah...you didnt say the magic word'
+      redirect_to frogs_path
+    end
+  end  
 end

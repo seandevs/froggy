@@ -54,16 +54,9 @@ class UsersController < ApplicationController
     def check_user
       if @current_user.id != params[:id].to_i
         flash[:notice] = 'ah ah ah...you didnt say the magic word'
-        redirect_to user_path(@user)
+        redirect_to frogs_path
       end
     end
-    
-      def check_frog
-        if @frog.current_user.id != params[:id].to_i
-          flash[:notice] = 'ah ah ah...you didnt say the magic word'
-          redirect_to users_path
-        end
-      end
 end
 
 

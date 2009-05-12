@@ -3,5 +3,6 @@
 <%= image_tag @user.photo.url(:medium) %>
 <span id="new_frog">
 <%= render :partial => 'frogs/u_frog', :collection => @user.frogs.latest %>
-<%= link_to 'Frogs', frogs_path %>
 </span>
+
+

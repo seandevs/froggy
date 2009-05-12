@@ -4,11 +4,12 @@
     <td><%= image_tag frog.user.photo.url(:small) %></td>	
     <td><%= link_to frog.user.name, frog.user %>:</td>
     <td><%= frog.name %></td>
-  </tr>
     <td><%= link_to_remote(image_tag("aup.jpg", :border => "none"), :url => frog_votes_path(frog)) %></td>
     <span id=<%= "vote_frog_#{frog.id}" %>
     <td>Leaps: <%= frog.votes.size %></td></span>
-    <td><%= link_to_remote(image_tag("adown.jpg", :border => "none"), :url => {:controller => "votes", :action => "destroy", :id => frog.id}, :method => 'delete') %></td>
+    <td><%= link_to_remote(image_tag("adown.jpg", :border => "none"), :url => {:controller => "votes", :action =>            "destroy", :id => frog.id}, :method => 'delete') %></td>
+  </tr>
+
 </div></h4>
 
 
