@@ -2,7 +2,7 @@ class FrogsController < ApplicationController
   before_filter :login_required
   before_filter :check_frog, :only => [:destroy, :edit, :update]
   def index
-    @frogs = Frog.find(:all, :order => 'frogs.id DESC')
+    @frogs = Frog.search(params[:search])
     @users = User.find(:all)
     @frog = Frog.new
   end

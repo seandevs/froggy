@@ -6,4 +6,12 @@ class Frog < ActiveRecord::Base
   def self.latest
     find(:all, :order => 'id DESC')
   end
+  
+  def self.search(search)  
+    if search
+      find(:all, :conditions => ['name LIKE ?', "%#{search}%"], :order => 'frogs.id DESC')
+    else
+      find(:all, :order => 'frogs.id DESC')
+    end
+  end
 end

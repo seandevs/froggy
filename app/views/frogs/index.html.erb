@@ -1,7 +1,17 @@
+<% form_tag frogs_path, :method => 'get' do %>
+  <p>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <h3>what's the haps?</h3>
-<p><% form_remote_tag :url => {:action => 'create' } do %>
-<%= text_area 'frog','name', :size =>"50x3" %><br /><br />
-  <%= submit_tag 'New Frog' %></p>
+
+<% form_remote_tag :url => {:action => 'create' } do %>
+  <p>
+    <%= text_area 'frog','name', :size =>"50x3" %><br /><br />
+    <%= submit_tag 'New Frog' %>
+  </p>
 <% end %>
 
 <div id="new_frog">
