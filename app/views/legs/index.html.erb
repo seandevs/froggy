@@ -1,0 +1,22 @@
+<h1>Listing legs</h1>
+
+<table>
+  <tr>
+    <th>Frog</th>
+    <th>Body</th>
+  </tr>
+
+<% for leg in @legs %>
+  <tr>
+    <td><%=h leg.frog_id %></td>
+    <td><%=h leg.body %></td>
+    <td><%= link_to 'Show', leg %></td>
+    <td><%= link_to 'Edit', edit_leg_path(leg) %></td>
+    <td><%= link_to 'Destroy', leg, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New leg', new_leg_path %>

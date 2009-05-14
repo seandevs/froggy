@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :frogs, :has_many => :votes
+  map.resources :frogs, :has_many => :legs
   map.resources :users
   map.resource :session
 

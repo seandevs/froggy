@@ -1,4 +1,20 @@
-<h2>frog.name</h2>
+<%= render :partial => @frog %>
+
+
+
+<% remote_form_for [@frog, Leg.new] do |f| %>
+  <p>
+	<%= f.label :body, "New Leg" %><br /><br />
+	<%= f.text_area :body, :size =>"50x3" %>
+  </p>
+  <p><%= f.submit "Add Some Legs" %></p>
+<% end %>
+
+<h2>Legs</h2>
+<div id="legs">
+	<%= render :partial => @frog.legs.latest %>
+</div>
+	
 
 
 <%= link_to 'Edit', edit_frog_path(@frog) %> |

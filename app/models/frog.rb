@@ -2,6 +2,7 @@ class Frog < ActiveRecord::Base
   validates_presence_of :name
   belongs_to :user
   has_many :votes
+  has_many :legs
   
   def self.latest
     find(:all, :order => 'id DESC')

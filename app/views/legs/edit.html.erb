@@ -1,0 +1,20 @@
+<h1>Editing leg</h1>
+
+<% form_for(@leg) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :frog_id %><br />
+    <%= f.text_field :frog_id %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_field :body %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @leg %> |
+<%= link_to 'Back', legs_path %>

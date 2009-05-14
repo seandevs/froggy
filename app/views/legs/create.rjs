@@ -1,0 +1,6 @@
+page.insert_html :top, :legs, :partial => @leg
+page[@leg].visual_effect :highlight, 
+                         :duration => 1, 
+                         :startcolor => '#aff9af', 
+                         :endcolor => '#f4e0b5'
+page[:new_leg].reset

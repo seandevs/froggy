@@ -8,6 +8,7 @@
     <span id=<%= "vote_frog_#{frog.id}" %>
     <td>Leaps: <%= frog.votes.size %></td></span>
     <td><%= link_to_remote(image_tag("adown.jpg", :border => "none"), :url => {:controller => "votes", :action =>            "destroy", :id => frog.id}, :method => 'delete') %></td>
+    <td><%= link_to 'Give some legs', frog %></td>
   </tr>
 
 </div></h4>

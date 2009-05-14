@@ -1,0 +1,6 @@
+<% div_for leg do %>
+	<p>
+	  <strong>Posted <%= time_ago_in_words(leg.created_at) %> ago</strong><br />
+	  <%= h(leg.body) %>
+	</p>
+<% end %>
